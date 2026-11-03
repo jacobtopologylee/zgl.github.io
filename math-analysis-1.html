@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学分析 I | Dr. Zhiguo Li</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Georgia', 'serif'],
+                        serif: ['"Times New Roman"', 'Georgia', 'serif'],
+                    },
+                    colors: { academic: '#1a1a1a', link: '#0056b3' }
+                }
+            }
+        }
+    </script>
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }, svg: { fontCache: 'global' } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { background-color: #fafafa; color: #1a1a1a; line-height: 1.7; }
+        .section-title { border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-weight: bold; font-size: 1.5rem; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 导航回上一级 -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm tracking-wide">
+            <div class="font-bold text-lg"><a href="course-math-analysis.html" class="text-academic hover:no-underline">← 返回《数学分析》主页</a></div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-16 space-y-12">
+        
+        <header class="border-b border-gray-300 pb-6">
+            <h1 class="text-3xl font-bold mb-2">数学分析 I (Mathematical Analysis I)</h1>
+        </header>
+
+        <!-- 模块 1：课程介绍 -->
+        <section>
+            <h2 class="section-title">课程介绍 (Course Description)</h2>
+            <p class="text-justify mb-4">
+
+
+数学分析I是数学类及理工科相关专业最重要的基础课之一，也是整个分析学体系的入门阶段。该课程以极限为基本工具，以一元函数为研究对象，旨在建立严格的微积分理论基础，训练逻辑推理与抽象思维能力，为后续的数学分析II、III以及常微分方程、复变函数等课程奠定基础。
+
+
+
+课程主要涵盖实数集与函数、数列极限、函数极限与连续性、导数与微分、微分中值定理及其应用。具体包括：实数系的基本性质与确界原理；数列极限的定义、性质与收敛准则（如单调有界定理、柯西收敛准则）；函数极限的定义、两个重要极限及无穷小量阶的比较；连续函数的性质（含闭区间上连续函数的基本定理）；导数与微分的概念及计算法则；微分中值定理（罗尔、拉格朗日、柯西）及其在函数性态研究、洛必达法则和泰勒公式中的应用。
+
+
+
+通过本课程，学生应能准确叙述并证明极限与连续性的基本定理，熟练掌握一元函数求导与积分运算，并能运用微分学和积分学工具解决极值、最值、函数作图及简单物理几何应用问题。
+            </p>
+        </section>
+
+
+<!-- 模块 2：课程进度安排 -->
+<section>
+    <h2 class="section-title">课程进度安排 (Schedule)</h2>
+    <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse border border-gray-300 bg-white text-sm">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2">周次</th>
+                    <th class="border border-gray-300 px-4 py-2">课次</th>
+                    <th class="border border-gray-300 px-4 py-2">教学内容</th>
+                    <th class="border border-gray-300 px-4 py-2">作业</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 第3周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第3周</td>
+                    <td class="border border-gray-300 px-4 py-2">1</td>
+                    <td class="border border-gray-300 px-4 py-2">导学</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第3周</td>
+                    <td class="border border-gray-300 px-4 py-2">2</td>
+                    <td class="border border-gray-300 px-4 py-2">集合和映射</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第3周</td>
+                    <td class="border border-gray-300 px-4 py-2">3</td>
+                    <td class="border border-gray-300 px-4 py-2">实数理论I</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第5周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第5周</td>
+                    <td class="border border-gray-300 px-4 py-2">4</td>
+                    <td class="border border-gray-300 px-4 py-2">实数理论II</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第5周</td>
+                    <td class="border border-gray-300 px-4 py-2">5</td>
+                    <td class="border border-gray-300 px-4 py-2">确界原理和不等式</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第5周</td>
+                    <td class="border border-gray-300 px-4 py-2">6</td>
+                    <td class="border border-gray-300 px-4 py-2">数列极限</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第6周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第6周</td>
+                    <td class="border border-gray-300 px-4 py-2">7</td>
+                    <td class="border border-gray-300 px-4 py-2">数列极限性质和收敛准则</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第6周</td>
+                    <td class="border border-gray-300 px-4 py-2">8</td>
+                    <td class="border border-gray-300 px-4 py-2">数列极限四则运算法则</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第6周</td>
+                    <td class="border border-gray-300 px-4 py-2">9</td>
+                    <td class="border border-gray-300 px-4 py-2">无穷大量和Stolz定理</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第6周</td>
+                    <td class="border border-gray-300 px-4 py-2">10</td>
+                    <td class="border border-gray-300 px-4 py-2">实数系基本定理I</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第7周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第7周</td>
+                    <td class="border border-gray-300 px-4 py-2">11</td>
+                    <td class="border border-gray-300 px-4 py-2">实数系基本定理II</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第7周</td>
+                    <td class="border border-gray-300 px-4 py-2">12</td>
+                    <td class="border border-gray-300 px-4 py-2">数列的上、下极限</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第7周</td>
+                    <td class="border border-gray-300 px-4 py-2">13</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第7周</td>
+                    <td class="border border-gray-300 px-4 py-2">14</td>
+                    <td class="border border-gray-300 px-4 py-2">函数基本知识</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第8周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第8周</td>
+                    <td class="border border-gray-300 px-4 py-2">15</td>
+                    <td class="border border-gray-300 px-4 py-2">函数极限</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第8周</td>
+                    <td class="border border-gray-300 px-4 py-2">16</td>
+                    <td class="border border-gray-300 px-4 py-2">函数极限的性质, 求极限的变量替换</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第8周</td>
+                    <td class="border border-gray-300 px-4 py-2">17</td>
+                    <td class="border border-gray-300 px-4 py-2">两个重要极限</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第8周</td>
+                    <td class="border border-gray-300 px-4 py-2">18</td>
+                    <td class="border border-gray-300 px-4 py-2">函数极限的存在性 (Heine定理、Cauchy收敛准则)</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第9周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第9周</td>
+                    <td class="border border-gray-300 px-4 py-2">19</td>
+                    <td class="border border-gray-300 px-4 py-2">无穷小和无穷大的阶</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第9周</td>
+                    <td class="border border-gray-300 px-4 py-2">20</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第9周</td>
+                    <td class="border border-gray-300 px-4 py-2">21</td>
+                    <td class="border border-gray-300 px-4 py-2">连续函数定义, 间断点, 连续函数的性质与运算, 初等函数的连续性</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第10周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第10周</td>
+                    <td class="border border-gray-300 px-4 py-2">22</td>
+                    <td class="border border-gray-300 px-4 py-2">一致连续</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第10周</td>
+                    <td class="border border-gray-300 px-4 py-2">23</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第10周</td>
+                    <td class="border border-gray-300 px-4 py-2">24</td>
+                    <td class="border border-gray-300 px-4 py-2">闭区间上连续函数之性质(I)</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第11周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第11周</td>
+                    <td class="border border-gray-300 px-4 py-2">25</td>
+                    <td class="border border-gray-300 px-4 py-2">闭区间上连续函数之性质(II)</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第11周</td>
+                    <td class="border border-gray-300 px-4 py-2">26</td>
+                    <td class="border border-gray-300 px-4 py-2">函数的上、下极限</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第11周</td>
+                    <td class="border border-gray-300 px-4 py-2">27</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第12周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第12周</td>
+                    <td class="border border-gray-300 px-4 py-2">28</td>
+                    <td class="border border-gray-300 px-4 py-2">导数的定义与意义</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第12周</td>
+                    <td class="border border-gray-300 px-4 py-2">29</td>
+                    <td class="border border-gray-300 px-4 py-2">求导法则 (四则运算, 反函数, 复合函数)</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第12周</td>
+                    <td class="border border-gray-300 px-4 py-2">30</td>
+                    <td class="border border-gray-300 px-4 py-2">微分及其运算, 习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第13周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第13周</td>
+                    <td class="border border-gray-300 px-4 py-2">31</td>
+                    <td class="border border-gray-300 px-4 py-2">隐函数与参数方程求导法</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第13周</td>
+                    <td class="border border-gray-300 px-4 py-2">32</td>
+                    <td class="border border-gray-300 px-4 py-2">高阶导数与高阶微分</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第13周</td>
+                    <td class="border border-gray-300 px-4 py-2">33</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第14周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第14周</td>
+                    <td class="border border-gray-300 px-4 py-2">34</td>
+                    <td class="border border-gray-300 px-4 py-2">中值定理</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第14周</td>
+                    <td class="border border-gray-300 px-4 py-2">35</td>
+                    <td class="border border-gray-300 px-4 py-2">L'Hospital 法则</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第14周</td>
+                    <td class="border border-gray-300 px-4 py-2">36</td>
+                    <td class="border border-gray-300 px-4 py-2">Taylor 公式</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第15周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第15周</td>
+                    <td class="border border-gray-300 px-4 py-2">37</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第15周</td>
+                    <td class="border border-gray-300 px-4 py-2">38</td>
+                    <td class="border border-gray-300 px-4 py-2">单调性, 极值与最值</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第15周</td>
+                    <td class="border border-gray-300 px-4 py-2">39</td>
+                    <td class="border border-gray-300 px-4 py-2">凹凸性</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第16周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第16周</td>
+                    <td class="border border-gray-300 px-4 py-2">40</td>
+                    <td class="border border-gray-300 px-4 py-2">函数作图和曲率</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第16周</td>
+                    <td class="border border-gray-300 px-4 py-2">41</td>
+                    <td class="border border-gray-300 px-4 py-2">作业讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第16周</td>
+                    <td class="border border-gray-300 px-4 py-2">42</td>
+                    <td class="border border-gray-300 px-4 py-2">习题讲解</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第17周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第17周</td>
+                    <td class="border border-gray-300 px-4 py-2">43</td>
+                    <td class="border border-gray-300 px-4 py-2">不定积分的定义与性质，积分表</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第17周</td>
+                    <td class="border border-gray-300 px-4 py-2">44</td>
+                    <td class="border border-gray-300 px-4 py-2">换元法（第一、第二类）</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第17周</td>
+                    <td class="border border-gray-300 px-4 py-2">45</td>
+                    <td class="border border-gray-300 px-4 py-2">分部积分法</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <!-- 第18周 -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第18周</td>
+                    <td class="border border-gray-300 px-4 py-2">46</td>
+                    <td class="border border-gray-300 px-4 py-2">有理函数的积分</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第18周</td>
+                    <td class="border border-gray-300 px-4 py-2">47</td>
+                    <td class="border border-gray-300 px-4 py-2">含√ax²+bx+c 的积分, 三角有理函数的积分</td>
+                    <td class="border border-gray-300 px-4 py-2">习题集作业</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2">第18周</td>
+                    <td class="border border-gray-300 px-4 py-2">48</td>
+                    <td class="border border-gray-300 px-4 py-2">总复习</td>
+                    <td class="border border-gray-300 px-4 py-2">—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+  <!-- 模块 3：辅导资料推荐下载 -->
+        <section>
+            <h2 class="section-title">辅导资料推荐下载 (Materials & Resources)</h2>
+            
+            <!-- 这里使用了相对路径 ./downloads/ 以及英文命名约定 -->
+            <ul class="list-disc list-inside space-y-2">
+                <li>
+                    <a href="./downloads/Cornell-notes-guide.pdf" download="Cornell-notes-guide.pdf" class="hover:underline text-link">
+                        [PDF]康奈尔笔记介绍
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/proof-completeness.pdf" download="完备性定理证明.pdf" class="hover:underline text-link">
+                        [PDF] 补充讲义：实数完备性六大基本定理的等价性证明
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/past-exams-math-1.zip" download="往年试题.zip" class="hover:underline text-link">
+                        [ZIP] 往年期中/期末考试真题及参考答案
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-4 p-4 bg-gray-50 border border-gray-200">
+                <h4 class="font-bold mb-2">推荐参考书：</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>华东师范大学数学系，《数学分析》（第五版）上册</li>
+                    <li>裴礼文，《数学分析中的典型问题与方法》</li>
+                    <li>Walter Rudin, <em>Principles of Mathematical Analysis</em></li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

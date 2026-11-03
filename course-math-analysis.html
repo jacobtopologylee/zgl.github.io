@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学分析 - 课程主页 | Dr. Zhiguo Li</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Georgia', 'serif'],
+                        serif: ['"Times New Roman"', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        academic: '#1a1a1a', 
+                        link: '#0056b3'      
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased bg-[#fafafa] text-[#1a1a1a] leading-relaxed">
+
+    <!-- 顶部导航栏 -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm tracking-wide">
+            <div class="font-bold text-lg"><a href="index.html" class="text-[#0056b3] hover:underline">← 返回个人主页 (Back to Home)</a></div>
+        </div>
+    </nav>
+
+    <!-- 内容主体 -->
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-16 space-y-12">
+        
+        <header class="border-b border-gray-300 pb-6">
+            <h1 class="text-3xl font-bold mb-2">数学分析 (Mathematical Analysis)</h1>
+            <p class="text-gray-600">面向对象：本科生 | 核心基础课程</p>
+        </header>
+
+        <section>
+            <p class="mb-6 text-justify">
+                《数学分析》是数学类专业最重要的基础课程，分为三个学期授课。请选择下方对应的学期模块，查看具体的课程介绍、进度安排、作业及资料下载。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 数学分析 I -->
+                <a href="math-analysis-1.html" class="block border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow group">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-[#0056b3]">数学分析 I</h3>
+                    <p class="text-sm text-gray-600">涵盖实数理论、极限理论、一元函数微积分学基础等内容。</p>
+                    <span class="text-sm text-[#0056b3] mt-4 inline-block font-bold">查看详情 →</span>
+                </a>
+
+                <!-- 数学分析 II -->
+                <a href="math-analysis-2.html" class="block border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow group">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-[#0056b3]">数学分析 II</h3>
+                    <p class="text-sm text-gray-600">涵盖级数理论（数项级数、函数项级数）、多元函数微分学等。</p>
+                    <span class="text-sm text-[#0056b3] mt-4 inline-block font-bold">查看详情 →</span>
+                </a>
+
+                <!-- 数学分析 III -->
+                <a href="math-analysis-3.html" class="block border border-gray-200 p-6 bg-white shadow-sm hover:shadow-md transition-shadow group">
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-[#0056b3]">数学分析 III</h3>
+                    <p class="text-sm text-gray-600">涵盖反常积分、含参变量积分、重积分、曲线积分与曲面积分等。</p>
+                    <span class="text-sm text-[#0056b3] mt-4 inline-block font-bold">查看详情 →</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 bg-white mt-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; 2026 Zhiguo Li. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

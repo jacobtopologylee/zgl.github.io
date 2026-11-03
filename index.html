@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Zhiguo Li - Personal Homepage</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Georgia', 'serif'],
+                        serif: ['"Times New Roman"', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        academic: '#1a1a1a', 
+                        link: '#0056b3'      
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- MathJax Configuration and Include -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { background-color: #fafafa; color: #1a1a1a; line-height: 1.7; }
+        .section-title { border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-weight: bold; font-size: 1.5rem; }
+        .nav-link:hover { text-decoration: underline; color: #0056b3; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm tracking-wide">
+            <div class="font-bold text-lg"><a href="#" class="text-academic hover:no-underline">Zhiguo Li</a></div>
+            <div class="space-x-6">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research & Publications</a>
+                <a href="#teaching" class="nav-link">Teaching</a>
+                <a href="#links" class="nav-link">Useful Links</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-16 space-y-20">
+
+        <!-- 1. About Me -->
+        <section id="about" class="flex flex-col md:flex-row gap-10 items-start">
+            <div class="flex-shrink-0">
+                <div class="w-40 h-52 bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 shadow-sm text-sm">
+                    [Photo Placeholder]
+                </div>
+            </div>
+            
+            <div class="flex-grow">
+                <h1 class="text-3xl font-bold mb-2">Zhiguo Li</h1>
+                <p class="text-lg italic text-gray-700 mb-4">Associate Professor, Master's Supervisor</p>
+                
+                <p class="mb-4">
+                    Teaching at the <strong>Department of Mathematics, School of Science, Hebei University of Technology</strong>. Board member of the Tianjin Society for Industrial and Applied Mathematics and  zbMATH Open  Reviewer. Served as a Visiting Scholar at the National University of Singapore (NUS) from August to November 2015. Awarded the Outstanding Teacher for Undergraduate Teaching Quality at Hebei University of Technology (2019-2025).
+                </p>
+                
+                <p class="mb-4">
+                    My research interests primarily focus on <strong>Graph Theory, Applications of Topology and Number Theory</strong>. In teaching, I consistently emphasize logical completeness and structural clarity, striving to combine abstract mathematical concepts with geometric intuition and historical motivation.
+                </p>
+
+                <div class="mt-6 text-sm bg-white p-4 border border-gray-200 shadow-sm">
+                    <ul class="space-y-1">
+                        <li><strong>Office:</strong> West #4-330，School of Science, Hebei University of Technology, Beichen District, Tianjin, China</li>
+                        <li><strong>Email:</strong> <a href="mailto:zhiguolee@hebut.edu.cn">zhiguolee@hebut.edu.cn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Research & Publications -->
+        <section id="research">
+            <h2 class="section-title">Research & Publications</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- Research Interests -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Research Interests</h3>
+                    <p>
+                        Focuses on graph coloring and embedding, number theory, applications of topology, and knot theory.
+                    </p>
+                </div>
+
+                <!-- Research Projects -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Research Projects</h3>
+                    <ul class="list-disc list-inside space-y-2 text-justify">
+                        <li>National Natural Science Foundation of China (General Program), Research on Non-convex Statistical Optimization Methods for Quadratic Inverse Problems, 2026.01-2029.12, Ongoing, Participant.</li>
+                        <li>Key Project of Science and Technology Research for Higher Education Institutions of Hebei Province, Research on Invariants of Virtual Knots and Welded Knots (ZD2020130), 2020.3-2024.6, Completed, Principal Investigator.</li>
+                        <li>Youth Science Fund Project of Hebei Natural Science Foundation, Research on Matching Book Embedding of Graphs, 2021.1-2023.12, Completed, Main Researcher.</li>
+                        <li>Education and Teaching Reform Research Project of Hebei University of Technology, Research on Higher Mathematics Teaching Reform based on the Background of New Engineering, 2017.9-2019.9, Completed, Main Researcher.</li>
+                        <li>Youth Science Fund Project of National Natural Science Foundation of China, Research on Genus Embedding of Graphs, 2014.1-2016.12, Completed, Main Researcher.</li>
+                        <li>Youth Science Fund Project of Hebei Natural Science Foundation, Research on Minimum Genus Problem of Graphs, 2012.1-2014.12, Completed, Main Researcher.</li>
+                    </ul>
+                </div>
+
+                <!-- Representative Publications -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Representative Publications</h3>
+                    <ul class="list-decimal list-outside ml-5 space-y-3 text-justify">
+                        <li><strong>Li Zhiguo*</strong>, Lei Fengchun, Chen Zhi, Wu Jie. On the fundamental groups of a certain class of welded knots. <em>Communications in Mathematical Research</em>, 2017, 33(2): 177-184.</li>
+                        <li><strong>Li Zhiguo*</strong>, Lei Fengchun, Wu Jie. On the unknotting number of a welded knot. <em>Journal of Knot Theory and Its Ramifications</em>, 2017, 26(01): 1750004.</li>
+                        <li><strong>Li Zhiguo*</strong>, Lei Fengchun, Li Jingyan. Virtual Braids, Virtual Temperley-Lieb Algebra and f-Polynomial. <em>Chinese Annals of Mathematics, Series B</em>, 2017, 38(6): 1275-1286.</li>
+                        <li>Zeling Shao, Xiaolei Hao, <strong>Zhiguo Li</strong>. Genus embeddings of two types of graphs. <em>Ars Combinatoria</em>, 2017, 134: 81-91.</li>
+                        <li>Yang Jiao, Shao Zeling, <strong>Li Zhiguo</strong>. Embedding Cartesian Product of Some Graphs in Books. <em>Communications in Mathematical Research</em>, 2018, 34(3): 253-260.</li>
+                        <li>Zeling Shao, Jiao Yang, <strong>Zhiguo Li</strong>. Book Embedding of Mobius Cubes. <em>Ars Combinatoria</em>, 2019, 145: 377-389.</li>
+                        <li>Shao Z L, Liu Y Q, <strong>Li Z G*</strong>. Matching book embedding of the cartesian product of a complete graph and a cycle. <em>Ars Combinatoria</em>, 2020, 153: 89-97.</li>
+                        <li>Shao Z L, Qi C Y, <strong>Li Z G*</strong>. Book embedding of graph bundles over a cycle with claw as a fibre. <em>Utilitas Mathematica</em>, 2020, 116: 33-44.</li>
+                        <li>Shao Z, Geng H, <strong>Li Z</strong>. Matching book thickness of generalized Petersen graphs. <em>Electronic Journal of Graph Theory and Applications</em>, 2022, 10(1): 173-180.</li>
+                        <li>Shao Z, Hu Y, Geng H, <strong>Li Z</strong>. The matching book embeddings of pseudo-Halin graphs. <em>Electronic Journal of Graph Theory and Applications (EJGTA)</em>, 2023, 11(1): 317-327.</li>
+                        <li><strong>Zhiguo Li</strong>, Qing Ye, Zeling Shao. The Alon-Tarsi number of two kinds of planar graphs. <em>Electronic Journal of Graph Theory and Applications</em>, 2023, 11(1): 155-164.</li>
+                        <li>Z. Shao, X. Yu, <strong>Z. Li</strong>. On the Dispersability of Odd Toroidal Grids. <em>Applied Mathematics and Computation</em>, 2023, 453: 128087.</li>
+                        <li><strong>Z. G. Li</strong>, Z. L. Shao, F. Petrov, and A. Gordeev. The Alon-Tarsi number of toroidal grids. <em>European Journal of Combinatorics</em>, 2023, 111: 103697.</li>
+                        <li>Xiaoxiang Yu, Zeling Shao, <strong>Zhiguo Li*</strong>. On the classification and dispersability of circulant graphs with two jump lengths. <em>Discrete Applied Mathematics</em>, 2024(355): 268-286.</li>
+                        <li><strong>Zhiguo Li</strong>, Yujia Gai, Zeling Shao. The Alon-Tarsi number of cupolarotundas and gyroelongated rotunda. <em>Electronic Journal of Graph Theory and Applications</em>, 2024, 12(2): 205–217.</li>
+                        <li>Zeling Shao, Yaqin Cui, <strong>Zhiguo Li</strong>. The dispersability of the Kronecker cover of the product of complete graphs and cycles. <em>Electronic Journal of Graph Theory and Applications</em>, 2024, 12(1): 117–123.</li>
+                        <li>Xiaoxiang Yu, Rong-Xia Hao, Jianbing Liu, <strong>Zhiguo Li</strong>. Partial petrial polynomials of ribbon graphs. <em>Discrete Applied Mathematics</em>, 2026, 394: 389-400.</li>
+                    </ul>
+                </div>
+
+                <!-- Software -->
+                <div>
+                    <h3 class="text-xl font-bold mb-2">Software & Service</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Copyright / Software:</strong> Book embedding number calculator software based on genetic algorithm (Copyright Protection Center of China, Software Product, 2022)</li>
+                        <li><strong>Copyright / Software:</strong> Scientific Computing Data Intelligent Analysis System V1.0 (Copyright Protection Center of China, Software Product, 2026)</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Teaching & Education -->
+        <section id="teaching">
+            <h2 class="section-title">Teaching & Education</h2>
+            <p class="mb-4">
+                Teaching core mathematical courses for undergraduate and graduate students. Awarded the Outstanding Teacher for Undergraduate Teaching Quality at Hebei University of Technology (2019-2025).
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Undergraduate Courses -->
+                <div class="border border-gray-200 p-5 bg-white shadow-sm">
+                    <h4 class="font-bold border-b border-gray-200 pb-2 mb-3">Undergraduate Courses</h4>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><a href="course-math-analysis.html" class="text-link hover:underline">Mathematical Analysis</a></li>
+                        <li><a href="course-topology-ug.html" class="text-link hover:underline">Topology</a></li>
+                        <li><a href="course-Calculus" class="text-link hover:underline">Calculus</a></li>
+                    </ul>
+                </div>
+                <!-- Graduate Courses -->
+                <div class="border border-gray-200 p-5 bg-white shadow-sm">
+                    <h4 class="font-bold border-b border-gray-200 pb-2 mb-3">Graduate Courses</h4>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><a href="course-topology-grad.html" class="text-link hover:underline">Foundations of Topology</a></li>
+                        <li><a href="course-topological-graph-theory.html" class="text-link hover:underline">Introduction to Topological Graph Theory and Knot Theory</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Educational Reform Projects -->
+            <div>
+                <h3 class="text-xl font-bold mb-3">Educational Reform Projects</h3>
+                <ul class="list-disc list-inside space-y-2 text-justify">
+                    <li>Hebei Province Graduate Demonstration Course Construction Project, Foundations of Topology (KCJSX2024018), 2024.1-2025.12, Completed, Principal Investigator.</li>
+                    <li>Hebei University of Technology Graduate Education and Teaching Reform Research Project, Research on the Integration of Ideological and Political Education into Blended Teaching in the Post-Epidemic Era - A Case Study of "Foundations of Topology", 2024.01-2025.12, Completed, Principal Investigator.</li>
+                    <li>Hebei University of Technology Education and Teaching Reform Research Project (202102001), Research and Practice of Blended Teaching Reform of New Engineering Mathematical Analysis based on the BOPPPS Model, 2022.1-2023.10, Completed, Principal Investigator.</li>
+                    <li>Hebei University of Technology Education and Teaching Reform Research Project (201903028), Course Construction of New Engineering Mathematical Analysis, 2019.12-2021.7, Completed, Principal Investigator.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. Useful Links -->
+        <section id="links">
+            <h2 class="section-title">Useful Links</h2>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://arxiv.org/archive/math" target="_blank" class="px-4 py-2 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors shadow-sm text-sm">
+                    <strong>arXiv.org</strong> (Math)
+                </a>
+                <a href="https://zbmath.org/" target="_blank" class="px-4 py-2 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors shadow-sm text-sm">
+                    <strong>zbMATH Open</strong>
+                </a>
+                <a href="https://mathscinet.ams.org/mathscinet" target="_blank" class="px-4 py-2 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors shadow-sm text-sm">
+                    <strong>MathSciNet</strong>
+                </a>
+                <a href="https://www.google.com/" target="_blank" class="px-4 py-2 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors shadow-sm text-sm">
+                    <strong>Google</strong>
+                </a>
+                <a href="https://www.wikipedia.org/" target="_blank" class="px-4 py-2 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors shadow-sm text-sm">
+                    <strong>Wikipedia</strong>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; 2026 Zhiguo Li. All rights reserved.</p>
+            <p class="mt-1">Designed with HTML5 & Tailwind CSS. Typeset with MathJax.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
