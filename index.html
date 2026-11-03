@@ -219,13 +219,27 @@
 
     </main>
 
-    <!-- Footer -->
+  <!-- 页脚与访问量统计 -->
     <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <p>&copy; 2026 Zhiguo Li. All rights reserved.</p>
             <p class="mt-1">Designed with HTML5 & Tailwind CSS. Typeset with MathJax.</p>
+            
+            <!-- 不算子访问量统计 -->
+            <div class="mt-4 text-xs text-gray-400">
+                <span id="busuanzi_container_site_pv">
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="font-bold text-gray-500"></span> 次
+                </span>
+                <span class="mx-2">|</span>
+                <span id="busuanzi_container_site_uv">
+                    总访客数 <span id="busuanzi_value_site_uv" class="font-bold text-gray-500"></span> 人
+                </span>
+            </div>
         </div>
     </footer>
+
+    <!-- 引入不算子统计脚本 (放在 </body> 标签的紧上方即可) -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
