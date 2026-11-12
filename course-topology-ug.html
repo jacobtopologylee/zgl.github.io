@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拓扑学 | Dr. Zhiguo Li</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Georgia', 'serif'],
+                        serif: ['"Times New Roman"', 'Georgia', 'serif'],
+                    },
+                    colors: { academic: '#1a1a1a', link: '#0056b3' }
+                }
+            }
+        }
+    </script>
+
+    <!-- MathJax 配置 -->
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }, svg: { fontCache: 'global' } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { background-color: #fafafa; color: #1a1a1a; line-height: 1.7; }
+        .section-title { border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-weight: bold; font-size: 1.5rem; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 导航回上一级 -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm tracking-wide">
+            <div class="font-bold text-lg"><a href="index.html" class="text-academic hover:no-underline">← 返回个人主页</a></div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-16 space-y-12">
+        
+        <header class="border-b border-gray-300 pb-6">
+            <h1 class="text-3xl font-bold mb-2">拓扑学 (Topology)</h1>
+            <p class="text-gray-600">面向对象：数学类专业本科生</p>
+        </header>
+
+        <!-- 模块 1：课程介绍 -->
+        <section>
+            <h2 class="section-title">课程介绍 (Course Description)</h2>
+            <p class="text-justify mb-4">
+                《拓扑学》是现代数学的重要基石之一，研究几何图形或空间在连续形变下保持不变的性质。本课程系统讲授点集拓扑学的基本概念与核心定理，并初步引入代数拓扑的几何直观与基本方法（如商空间、曲面分类与基本群）。
+            </p>
+            <p class="text-justify mb-4">
+                课程注重建立抽象集合论公理与具体几何空间之间的桥梁。例如，利用基本群 $\pi_1(X, x_0)$ 这一代数不变量来区分不同的拓扑空间：圆周 $S^1$ 的基本群同构于整数加群 $\pi_1(S^1) \cong \mathbb{Z}$，而二维球面 $S^2$ 是单连通的，即 $\pi_1(S^2) = \{0\}$。
+            </p>
+        </section>
+
+        <!-- 模块 2：课程进度安排 -->
+        <section>
+            <h2 class="section-title">课程进度安排 (Schedule)</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-gray-300 bg-white text-sm">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-4 py-2">周次</th>
+                            <th class="border border-gray-300 px-4 py-2">教学内容</th>
+                            <th class="border border-gray-300 px-4 py-2">重点与难点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 1-2 周</td>
+                            <td class="border border-gray-300 px-4 py-2">朴素集合论与度量空间回顾</td>
+                            <td class="border border-gray-300 px-4 py-2">基数、选择公理、度量空间中的开集与连续性</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 3-5 周</td>
+                            <td class="border border-gray-300 px-4 py-2">拓扑空间与连续映射</td>
+                            <td class="border border-gray-300 px-4 py-2">开集公理、邻域系、拓扑基与子基、同胚映射</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 6-8 周</td>
+                            <td class="border border-gray-300 px-4 py-2">子空间、乘积空间与商空间</td>
+                            <td class="border border-gray-300 px-4 py-2">初拓扑与终拓扑、粘合构造（莫比乌斯带、环面、射影平面）</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 9-11 周</td>
+                            <td class="border border-gray-300 px-4 py-2">连通性与紧致性</td>
+                            <td class="border border-gray-300 px-4 py-2">道路连通性、Tychonoff 乘积定理、度量空间的紧致性</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 12-14 周</td>
+                            <td class="border border-gray-300 px-4 py-2">分离性公理与可数性公理</td>
+                            <td class="border border-gray-300 px-4 py-2">Hausdorff 空间、正则与正规空间、Urysohn 引理</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 15-16 周</td>
+                            <td class="border border-gray-300 px-4 py-2">代数拓扑初步：基本群与覆叠空间</td>
+                            <td class="border border-gray-300 px-4 py-2">同伦等价、基本群的计算、紧致曲面分类简介</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 模块 3：作业与练习 -->
+        <section>
+            <h2 class="section-title">作业与练习 (Assignments)</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>拓扑空间与连续性：</strong> 验证有限补拓扑与余可数拓扑的公理，证明开映射、闭映射与同胚的关系。</li>
+                <li><strong>商空间构造：</strong> 严谨证明单位正方形经对边粘合后与环面 $T^2 = S^1 \times S^1$ 同胚。</li>
+                <li><strong>连通与紧致：</strong> 证明紧致空间的连续像仍为紧致空间，并给出紧致 Hausdorff 空间连续双射必为同胚的反例分析。</li>
+                <li><strong>基本群：</strong> 利用同伦不变性证明二维圆盘 $D^2$ 不能收缩到其边界圆周 $S^1$（Brouwer 不动点定理的拓扑证明）。</li>
+            </ul>
+        </section>
+
+        <!-- 模块 4：辅导资料推荐下载 -->
+        <section>
+            <h2 class="section-title">辅导资料推荐下载 (Materials & Resources)</h2>
+            
+            <ul class="list-disc list-inside space-y-2">
+                <li>
+                    <a href="./downloads/syllabus-topology-ug.pdf" download="拓扑学教学大纲.pdf" class="hover:underline text-link">
+                        [PDF] 本科生《拓扑学》教学大纲及考核标准
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/notes-quotient-surfaces.pdf" download="商空间与闭曲面分类讲义.pdf" class="hover:underline text-link">
+                        [PDF] 补充讲义：商空间构造与二维闭曲面的拓扑分类
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/past-exams-topology.zip" download="拓扑学往年试题.zip" class="hover:underline text-link">
+                        [ZIP] 往年期中/期末考试真题及参考解答
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-4 p-4 bg-gray-50 border border-gray-200">
+                <h4 class="font-bold mb-2">推荐参考书：</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>熊金城，《点集拓扑讲义》（第五版），高等教育出版社</li>
+                    <li>尤承业，《基础拓扑学讲义》，北京大学出版社</li>
+                    <li>James R. Munkres, <em>Topology</em> (2nd Edition)</li>
+                    <li>M. A. Armstrong, <em>Basic Topology</em></li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 bg-white mt-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; 2026 Zhiguo Li. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拓扑学基础 | Dr. Zhiguo Li</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Times New Roman"', 'Georgia', 'serif'],
+                        serif: ['"Times New Roman"', 'Georgia', 'serif'],
+                    },
+                    colors: { academic: '#1a1a1a', link: '#0056b3' }
+                }
+            }
+        }
+    </script>
+
+    <!-- MathJax 配置 -->
+    <script>
+        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']] }, svg: { fontCache: 'global' } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body { background-color: #fafafa; color: #1a1a1a; line-height: 1.7; }
+        .section-title { border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; margin-bottom: 1.5rem; font-weight: bold; font-size: 1.5rem; }
+        a { color: #0056b3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 导航回上一级 -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center text-sm tracking-wide">
+            <div class="font-bold text-lg"><a href="index.html" class="text-academic hover:no-underline">← 返回个人主页</a></div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32 pb-16 space-y-12">
+        
+        <header class="border-b border-gray-300 pb-6">
+            <h1 class="text-3xl font-bold mb-2">拓扑学基础 (Foundations of Topology)</h1>
+            <p class="text-gray-600">面向对象：数学学科硕士研究生 | 河北省研究生示范课程建设项目 (KCJSX2024018)</p>
+        </header>
+
+        <!-- 模块 1：课程介绍 -->
+        <section>
+            <h2 class="section-title">课程介绍 (Course Description)</h2>
+            <p class="text-justify mb-4">
+                《拓扑学基础》是数学学科硕士研究生的核心基础课程，旨在为后续学习代数拓扑、微分拓扑、拓扑图论及纽结理论奠定坚实的理论基础。课程系统深入地讲授点集拓扑学的高阶理论与代数拓扑学的核心工具。
+            </p>
+            <p class="text-justify mb-4">
+                在点集拓扑部分，重点讨论紧致性、分离性公理、度量化定理（Urysohn 度量化定理、Nagata-Smirnov 定理）及仿紧性；在代数拓扑部分，系统构建同伦理论、基本群与 Seifert-van Kampen 定理，以及覆叠空间（Covering Spaces）与伽罗瓦对应理论。例如，利用 Seifert-van Kampen 定理计算两个空间楔和的基本群：
+                $$ \pi_1(X \vee Y) \cong \pi_1(X) * \pi_1(Y) $$
+            </p>
+        </section>
+
+        <!-- 模块 2：课程进度安排 -->
+        <section>
+            <h2 class="section-title">课程进度安排 (Schedule)</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse border border-gray-300 bg-white text-sm">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="border border-gray-300 px-4 py-2">周次</th>
+                            <th class="border border-gray-300 px-4 py-2">教学内容</th>
+                            <th class="border border-gray-300 px-4 py-2">重点与难点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 1-2 周</td>
+                            <td class="border border-gray-300 px-4 py-2">拓扑空间、网与滤子收敛</td>
+                            <td class="border border-gray-300 px-4 py-2">一般拓扑空间的收敛理论、初拓扑与终拓扑的泛性质</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 3-5 周</td>
+                            <td class="border border-gray-300 px-4 py-2">紧致性与局部紧致性</td>
+                            <td class="border border-gray-300 px-4 py-2">Tychonoff 定理（超滤子证明）、Alexandroff 单点紧化与 Stone-Čech 紧化</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 6-8 周</td>
+                            <td class="border border-gray-300 px-4 py-2">分离性、仿紧性与度量化定理</td>
+                            <td class="border border-gray-300 px-4 py-2">Urysohn 引理、Tietze 扩张定理、单位分解、Urysohn 度量化定理</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 9-11 周</td>
+                            <td class="border border-gray-300 px-4 py-2">同伦论与基本群</td>
+                            <td class="border border-gray-300 px-4 py-2">道路同伦、基本群的函子性、形变收缩与同伦等价</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 12-13 周</td>
+                            <td class="border border-gray-300 px-4 py-2">自由积与 Seifert-van Kampen 定理</td>
+                            <td class="border border-gray-300 px-4 py-2">群的自由积与融合自由积、闭曲面基本群的计算</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 px-4 py-2">第 14-16 周</td>
+                            <td class="border border-gray-300 px-4 py-2">覆叠空间理论与分类</td>
+                            <td class="border border-gray-300 px-4 py-2">路径提升与同伦提升性质、覆叠变换群、万有覆叠空间与伽罗瓦对应</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 模块 3：作业与研讨 -->
+        <section>
+            <h2 class="section-title">作业与研讨 (Assignments & Seminars)</h2>
+            <ul class="list-disc list-inside space-y-2">
+                <li><strong>收敛与紧致化：</strong> 利用网（Net）或超滤子证明 Tychonoff 乘积定理，并刻画局部紧 Hausdorff 空间的单点紧化。</li>
+                <li><strong>度量化与扩张：</strong> 证明紧致 Hausdorff 空间必为正规空间，完成 Tietze 扩张定理的关键步骤推导。</li>
+                <li><strong>Seifert-van Kampen 定理：</strong> 计算亏格为 $g$ 的可定向闭曲面 $\Sigma_g$ 及不可定向闭曲面 $N_k$ 的基本群表示。</li>
+                <li><strong>覆叠空间：</strong> 构造圆周 $S^1$ 与 $8$ 字形空间 $S^1 \vee S^1$ 的若干非平凡覆叠空间，并分析其覆叠变换群。</li>
+                <li><em>课程研讨：选读 Munkres 或 Hatcher 经典章节，进行课堂专题报告。</em></li>
+            </ul>
+        </section>
+
+        <!-- 模块 4：辅导资料推荐下载 -->
+        <section>
+            <h2 class="section-title">辅导资料推荐下载 (Materials & Resources)</h2>
+            
+            <ul class="list-disc list-inside space-y-2">
+                <li>
+                    <a href="./downloads/syllabus-topology-grad.pdf" download="研究生拓扑学基础教学大纲.pdf" class="hover:underline text-link">
+                        [PDF] 研究生《拓扑学基础》教学大纲与课程思政案例库
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/notes-svk-covering.pdf" download="Seifert-van-Kampen与覆叠空间讲义.pdf" class="hover:underline text-link">
+                        [PDF] 专题讲义：Seifert-van Kampen 定理与覆叠空间的伽罗瓦对应
+                    </a>
+                </li>
+                <li>
+                    <a href="./downloads/exercises-topology-grad.zip" download="拓扑学基础精选习题集.zip" class="hover:underline text-link">
+                        [ZIP] 研究生《拓扑学基础》专题习题集与参考解答
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mt-4 p-4 bg-gray-50 border border-gray-200">
+                <h4 class="font-bold mb-2">推荐参考书：</h4>
+                <ol class="list-decimal list-inside text-sm space-y-1 text-gray-700">
+                    <li>James R. Munkres, <em>Topology</em> (2nd Edition)</li>
+                    <li>Allen Hatcher, <em>Algebraic Topology</em> (Chapter 1: The Fundamental Group)</li>
+                    <li>William S. Massey, <em>A Basic Course in Algebraic Topology</em></li>
+                    <li>李志国 编，《拓扑学初步》讲义</li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 bg-white mt-10">
+        <div class="max-w-4xl mx-auto px-6">
+            <p>&copy; 2026 Zhiguo Li. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
